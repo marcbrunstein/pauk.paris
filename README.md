@@ -32,15 +32,21 @@ python pull.py ../assets/pull.svg
 python pull.py ../assets/pull-lisere.svg lisere
 ```
 
+## Les photos
+
+Dans `assets/img/` : une version web (1600 px) de chaque photo, et dans `assets/img/hd/` une version haute définition (2400 px) que la page Presse propose aux journalistes. Les métadonnées (lieu GPS, appareil) ont été retirées.
+
+Pour ajouter une photo, la redimensionner aux mêmes tailles, la déposer dans ces deux dossiers et copier une ligne `<figure>` de `presse.html`.
+
 ## Ce qui reste à compléter
 
 Tout ce qui est à compléter apparaît sur le site **hachuré en rose**. Pour les retrouver dans le code, chercher `todo`. Une fois l'élément rempli, retirer `todo` de la classe.
 
-- [ ] Photos HD : un portrait pour l'accueil (il utilise pour l'instant l'affiche, en basse définition) et 3 photos pour la presse, avec le nom du photographe. Les déposer dans `assets/img/`. L'emplacement est indiqué en commentaire dans `index.html` et `presse.html`.
+- [ ] Accord des autres comédiens visibles sur la photo FMR Académie (`fmr-academie-avignon-2026.jpg`, pages Sur scène et Presse).
+- [ ] Affiche de L'Art de rater en haute définition (celle du site ne fait que 500 px de large).
 - [ ] Créer l'adresse **contact@pauk.paris** chez le bureau d'enregistrement.
 - [ ] Lien de la chaîne YouTube.
 - [ ] Court métrage L'Art de rater : durée, année, équipe, lien de visionnage ou bande-annonce.
-- [ ] Nom du photographe de l'affiche.
 - [ ] Passage sur Comédie+ : émission, date, extrait.
 - [ ] Un extrait de stand-up.
 - [ ] Liens directs de billetterie pour Méchant.e, FMR Académie et Bon Camarade (ils renvoient pour l'instant vers la fiche Offi de Paul).

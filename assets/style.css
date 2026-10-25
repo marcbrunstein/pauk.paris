@@ -137,6 +137,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .poster { border: 3px solid var(--ink); border-radius: 10px; overflow: hidden; box-shadow: 8px 8px 0 var(--ink); max-width: 340px; width: 100%; justify-self: center; }
 .poster img { width: 100%; height: auto; }
 
+/* Photo de scène en largeur */
+.wide-photo { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.wide-photo .frame { border: 3px solid var(--ink); border-radius: 10px; overflow: hidden; box-shadow: 8px 8px 0 var(--ink); max-width: 100%; }
+.wide-photo img { width: 100%; height: auto; aspect-ratio: 16 / 7.2; object-fit: cover; }
+.wide-photo figcaption { font-family: var(--mono); font-size: 0.8rem; }
+
 /* ---------- Bandeaux ---------- */
 .band { background: var(--paper); border-top: 3px solid var(--ink); }
 .band .inner { padding-block: 56px; display: flex; flex-direction: column; gap: 28px; }
@@ -229,6 +235,10 @@ a.card:hover .thumb { transform: translate(-3px, -3px); box-shadow: 4px 4px 0 va
 .photos figure { margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .photos .frame { aspect-ratio: 4 / 5; max-width: 100%; border: 2.5px solid var(--ink); border-radius: 8px; background: var(--yellow); display: grid; place-items: center; overflow: hidden; }
 .photos .frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.photos.wide { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.photos.wide .frame { aspect-ratio: 16 / 7.2; }
+.photos a.frame { transition: transform .15s, box-shadow .15s; }
+.photos a.frame:hover { transform: translate(-3px, -3px); box-shadow: 4px 4px 0 var(--ink); }
 .photos .frame.pink { background: var(--pink); }
 .photos figcaption { font-size: 0.85rem; }
 

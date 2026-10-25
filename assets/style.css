@@ -72,8 +72,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .btn:hover { color: var(--yellow); transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--pink); }
 .btn.ghost { background: transparent; color: var(--ink); }
 .btn.ghost:hover { color: var(--ink); }
-.on-ink .btn { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
-.on-ink .btn.ghost { background: transparent; color: var(--yellow); }
+/* .band.ink a colore tous les liens en jaune : on le surclasse pour les boutons */
+.band.ink .btn, .on-ink .btn, .band.ink .btn:hover { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+.band.ink .btn.ghost, .on-ink .btn.ghost { background: transparent; color: var(--yellow); }
 
 /* ---------- Héros ---------- */
 .hero .inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: end; padding-block: 32px 56px; }
